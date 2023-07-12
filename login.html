@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Food to Go</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+
+    <!-- Scripts -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/land.css" rel="stylesheet">
+</head>
+<body>
+    <div class="vh">
+        <nav class="navbar">
+            <div class="container">
+                <a class="brand" href="land.html">
+                    <img src="/icon.png" height="40px"><span>Food to Go
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="land.html">
+                             Home
+                        </a>
+                        <a class="navbar-brand" href="/canteen">
+                           Canteens
+                        </a>
+                        <a class="navbar-brand" href="/About">
+                            About Us
+                        </a>
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav">
+                        <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white;" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white;" href="register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="login">
+                        <div class="card-title">
+                            <h2 class="fw-bolder">Sign In</h2>
+                        </div>
+
+                        <form method="POST" action="login.html">
+                            <div class="row-fluid">
+                                <label hidden for="email" class="col-md-2 col-form-label text-md-end"></label>
+
+                                <div class="col-md-11">
+                                    <input id="email" style="border: 1px solid #C43F52;" type="email" class="form-control" name="email" required autocomplete="email" autofocus placeholder="Email Address">
+                                </div>
+                            </div>
+
+                            <div class="row-fluid">
+                                <label hidden for="password" class="col-md-2 col-form-label text-md-end"></label>
+
+                                <div class="col-md-11">
+                                    <input id="password" style="border: 1px solid #C43F52;" type="password" class="form-control" name="password" required autocomplete="current-password" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="d-flex row">
+                                <div class="col-6" style="padding-left: 25px;">
+                                    <div class="form-check">
+                                        <input class="form-check-input" style="border: 1px solid #C43F52;" type="checkbox" name="remember" id="remember">
+
+                                        <label class="form-check-label" for="remember">
+                                            Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <button type="submit" class="col-10 btn btn-primary btn-red mx-auto" style="box-shadow: 0px 10px 20px rgba(235, 45, 72, 0.5);">
+                                    <span>Sign In
+                                </button>
+                            </div>
+
+                            <div class="row">
+                                <div class="d-flex">
+                                    <a class="btn" href="login.html">Forgot Your Password?</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-center"><span style="color: gray;">Don’t have an account? <a class="nav-link" href="register.html" style="color: #C43F52">Sign up</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 p-0">
+                <img src="Adnu.jpg" class="img-responsive" style="width:768px;height:637px;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+:root{
+    --primary-rgb: 196, 63, 82;
+}
+
+body{
+    background: radial-gradient(75.6% 209.38% at 100% 100%, #FFD0D6 2.14%, #FFFFFF 100%);
+}
+
+.bg-navbar{
+    background-color: rgb(var(--primary-rgb));
+}
+
+a > span, a{
+    color: white;
+}
+
+.navicon{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.adnupic{
+    width: 100%
+}
+
+.loginShadow{
+    box-shadow: 0px 4px 30px 10px rgba(250, 0, 36, 0.18);
+}
+
+.heading1{
+    color: rgb(var(--primary-rgb));
+    font-family: 'Vidaloka', serif;
+    font-size: 80px;
+}
+
+.column {
+    width: 735px;
+    background-size:contain;
+}
+
+.column.right {
+    float:right;
+    background-repeat: no-repeat;
+}
+
+#scrollbar {
+    overflow-y: scroll;
+    max-height: auto;
+  }
+  
+  ::-webkit-scrollbar { 
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.0);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #C43F52;
+  }
+  .p:hover {
+    color: #C43F52;
+  }
+  .p{
+    font-family: 'Lexend'; 
+    font-style: normal; 
+    font-weight: 400; 
+    font-size: 20px; 
+    line-height: 30px; 
+    color: #AFAFAF;
+  }
+  .menu{
+    display: flex; 
+    align-items: center; 
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); 
+    border-radius: 15px; 
+    height: 60px;
+  }
+  .pp{
+    font-family: 'Lexend'; 
+    font-style: normal; 
+    font-weight: 700; 
+    font-size: 20px; 
+    line-height: 25px; 
+    color: #FFFFFF;
+  }
+  .pp:hover{
+    text-decoration: underline;
+  }
+  .popular{
+    display: flex; 
+    align-items: center;
+     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); 
+     border-radius: 15px; 
+     height: 60px;
+  }
+ 
+
+.meal{
+
+    margin-left: 247px;
+}
+.loc{
+    margin-top: -30px;
+}
+.carousel{
+    width: 60%;
+    height: 60%;
+}

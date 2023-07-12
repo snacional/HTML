@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="">
+
+    <title>Food to Go</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+
+    <!-- Scripts -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="app.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="land.css" rel="stylesheet">
+</head>
+<body>
+    <div class="vh">
+        <nav class="navbar">
+            <div class="container">
+                <a class="brand" href="land.html">
+                <img src="icon.png" height="40px"><span>Food to Go
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                </button>
+                <div class="collapse" id="navbarSupportedContent">
+
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="land.html">
+                            <span> Home
+                        </a>
+                        <a class="navbar-brand" href="">
+                            <span> Canteens
+                        </a>
+                        <a class="navbar-brand" href="">
+                            <span> About Us
+                        </a>
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav">
+                        <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white;" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white;" href="register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-6 ">
+                <div class="card" style="background-color: rgba(255, 255, 255, 0.0);">
+                    <div class="card-header" style="background-color: rgba(255, 255, 255, 0.0); border-bottom: 1px;">
+                        <h2 class="fw-bolder" style="color: Black;">Register</h2>
+                    </div>
+
+                    <div class="card-body">
+                        <form method="POST" action="register.html">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input id="name" type="text" class="form-control" name="name" required autocomplete="name" autofocus style="border: 1px solid #C43F52;" placeholder="Name">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <input id="email" type="email" class="form-control" name="email" required autocomplete="email" style="border: 1px solid #C43F52;" placeholder="Email Address">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password" style="border: 1px solid #C43F52;" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" style="border: 1px solid #C43F52;" placeholder="Confirm Password">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn" style="background-color: #C43F52; border-color: #C43F52; width: 327px;">Register</button>
+                                </div>
+                            </div>
+                            <p class="text-center py-4">
+                                <span style="color: gray;">Already have an account?
+                                <a class="nav-link" href="login.html" style="color: #C43F52;">Login</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+runtime: php82
+
+
+runtime_config:
+ document_root: .
+
+handlers:
+  - url: /(.+\.html?)$
+    static_files: \1
+    upload: .+\.(html?)$
+
+  - url: /js
+    static_dir: js
+
+  - url: /img
+    static_dir: img
+
+  - url: /css
+    static_dir: css
+
+  - url: /.*
+    static_files: \1
+    upload: (.*)
