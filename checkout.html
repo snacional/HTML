@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="">
 
-    <title>Food to Go</title>
+    <title>Food to Go - Checkout</title>
     <link rel="icon" type="image/x-icon" href="/icon.ico">
 
     <!-- Scripts -->
@@ -26,7 +26,7 @@
     <link href="css/land.css" rel="stylesheet">
 </head>
 <body>
-    <div class="vh-50">
+    <div class="vh-30">
         <nav class="navbar navbar-expand-md shadow-sm bg-navbar">
             <div class="container">
                 <a class="brand navbar-brand" href="land copy.html">
@@ -58,24 +58,38 @@
                        <a class="navicon" href="land.html" style="color: white">Logout </a>
         </div>
     </nav>
-        </nav>
     </div>
-    <div class="container my-5 py-5" >
-        <div class="row justify-content-center">
-            <div class="col-md-7">
-                <div class="card" style="background-color: rgba(255, 255, 255, 0.0);">
-                    <div class="card-header"style="background-color: #C43F52;"><span style="color: white;">About Us</span></div>
-    
-                    <div class="card-body" style="background-color: rgba(255, 255, 255, 0.0);">
-                        <p>Food to Go is a platform that allows you to order food from various canteens around your area. Our goal is to provide you with a convenient and easy way to order food, without having to worry about waiting in long lines or dealing with cash.</p>
-    
-                        <p>We believe that everyone should have access to delicious and affordable food, and our platform is designed to make that possible. Whether you're in a rush or simply want to avoid the hassle of cooking, Food to Go is the perfect solution for you.</p>
-    
-                        <p>If you have any questions or feedback, please feel free to contact us at <span class="fw-bold text-decoration-underline">support@foodtogo.com.</span></p>
-                    </div>
+    <div class="container-fluid py-5">
+        <div class="col-12 mx-auto">
+          <h1 class="text-center"><span style="color: #C43F52;">Checkout</span></h1>
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <div class="card p-5" style="border-color: #C43F52; border-style: solid; border-radius: 10px;">
+                <div class="card-body" style="border-radius: 10px; background-color: #FFD8DE;">
+                  <h3 class="mb-4">Order Queue</h3>
+                  <p>Your order has been queued.</p>
+                  <p>Please wait for your turn. Your queue number is:</p>
+                  <h2 class="mb-4" id="queue-number"></h2>
+                  <p>Thank you for choosing Food to Go!</p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    </body>
-    </html>
+      </div>
+      
+      <style>
+        .btn-delete-item svg {
+          fill: red;
+        }
+      </style>
+      
+      <script>
+        // Generate a random queue number
+        const queueNumber = Math.floor(Math.random() * 100) + 1;
+        const queueNumberElement = document.getElementById('queue-number');
+        queueNumberElement.textContent = queueNumber;
+      </script>
+      
+</body>
+</html>

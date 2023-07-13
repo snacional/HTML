@@ -7,12 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="">
 
-    <title>Food to Go</title>
+    <title>Food to Go - Cart</title>
     <link rel="icon" type="image/x-icon" href="/icon.ico">
 
     <!-- Scripts -->
     <script src="js/app.js" defer></script>
-    <script src="js/menu.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,79 +26,114 @@
     <link href="css/land.css" rel="stylesheet">
 </head>
 <body>
-<div class="vh-30">
-    <nav class="navbar navbar-expand-md shadow-sm bg-navbar">
-        <div class="container">
-            <a class="brand navbar-brand" href="land.html">
-            <img src="img/icon.png" height="40px"><span>Food to Go</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="vh-30">
+        <nav class="navbar navbar-expand-md shadow-sm bg-navbar">
+            <div class="container">
+                <a class="brand navbar-brand" href="land copy.html">
+                <img src="img/icon.png" height="40px"><span>Food to Go</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav ms-auto">
-                    <a class="navbar-brand" href="land.html">
-                        <span> Home </span>
-                    </a>   
-                    <a class="navbar-brand" href="canteen.html">
-                        <span> Canteens </span>
-                    </a>    
-                    <a class="navbar-brand" href="about.html">
-                        <span> About Us </span>
-                    </a>         
-                </ul>
-               <!-- Right Side Of Navbar -->
-               <ul class="navbar-nav ms-auto">
-                <!-- Authentication Links -->
-               
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <a class="navbar-brand" href="land copy.html">
+                            <span> Home </span>
+                        </a>   
+                        <a class="navbar-brand" href="canteen.html">
+                            <span> Canteens </span>
+                        </a>    
+                        <a class="navbar-brand" href="about.html">
+                            <span> About Us </span>
+                        </a>         
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <div class="d-flex align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link" style="color:white;" href="login.html"> Login </a>
-                        </li>
-                
-                        <li class="nav-item">
-                            <a class="nav-link" style="color:white;" href="register.html" }}"> Register </a>
-                        </li>
-                  
-                <!-- Heart & Cart -->
-                <div class="d-flex align-items-center">
-                    <a class="navicon" href="favorites.html"><img src="img/heart.png" alt="Favorites" height="24"> </a>
-                    <a class="navicon" href="cart.html"><img src="img/cart.png" alt="Favorites" height="24"> </a>
-                <!-- Profile -->
-                </div>
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: white; font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                               Logout
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            </form>
-                        </div>
-                    </li>
-            </ul>
+                            <span style="color: white">Guest</span>
+                       </li>
+                       <a class="navicon" href="cart.html"><img src="img/cart.png" alt="Favorites" height="24"> </a>
+                       <a class="navicon" href="land.html" style="color: white">Logout </a>
         </div>
-    </div>
-</nav>
     </nav>
-</div>
-<div class="container">
-    <h1 class="my-4 text-center">Cart</h1>
-    <div class="cart-items">
-        <!-- Cart items will be dynamically added here -->
     </div>
-    <div class="cart-total text-end">
-        <h4>Total: <span id="cart-total">₱0.00</span></h4>
-    </div>
-    <div class="text-center mt-4">
-        <button class="btn btn-primary">Checkout</button>
-    </div>
-</div>
-
-<script src="js/cart.js"></script>
+    <div class="container-fluid py-5">
+        <div class="col-12 mx-auto">
+          <h1 class="text-center"><span style="color: #C43F52;">Cart</span></h1>
+          <div class="row row-cols-3 gap-5 justify-content-center cart-container">
+            <div class="card col p-5" style="border-color: #C43F52; border-style: solid; border-radius: 10px;">
+              <div class="card-body row-cols-1" style="border-radius: 10px; background-color: #FFD8DE; padding: 15px;">
+                <div class="card-body mt-1" style="border-radius: 10px; background-color: white;">
+                  <div id="cart-items"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-1">
+            <div class="card bg-danger text-white text-center" style="border-radius: 10px;">
+              <div class="card-body">
+                <h2 class="card-text" id="cart-total" style="font-size: 15px; font-weight: bold;">Total:</h2>
+              </div>
+            </div>
+            <div class="card-footer text-center">
+              <a href="checkout.html" class="btn btn-primary mt-3" style="background-color: #C43F52; border-color: #C43F52;">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <style>
+        .btn-delete-item svg {
+          fill: red;
+        }
+      </style>
+      
+      <script>
+        // Retrieve cart items and total price from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const totalPrice = parseFloat(localStorage.getItem('totalPrice')) || 0;
+      
+        // Display cart items
+        const cartItemsElement = document.getElementById('cart-items');
+        cartItems.forEach((item, index) => {
+          const itemElement = document.createElement('div');
+          itemElement.classList.add('cart-item');
+          itemElement.innerHTML = `
+            <div class="d-flex align-items-center justify-content-between">
+              <p>${item.name} - ₱ ${item.price.toFixed(2)}</p>
+              <button class="btn btn-link btn-delete-item" data-index="${index}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20px" height="20px">
+                  <path d="M19,11H5V9H19V11Z" />
+                </svg>
+              </button>
+            </div>
+          `;
+          cartItemsElement.appendChild(itemElement);
+        });
+      
+        // Display total price
+        const cartTotalElement = document.getElementById('cart-total');
+        cartTotalElement.textContent = `Total: ₱ ${totalPrice.toFixed(2)}`;
+      
+        // Add event listeners to delete buttons
+        const deleteButtons = document.getElementsByClassName('btn-delete-item');
+        Array.from(deleteButtons).forEach(button => {
+          button.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            location.reload(); // Reload the page to reflect the updated cart
+          });
+        });
+      
+        // Clear cart items and total price from localStorage after displaying them
+        localStorage.removeItem('cartItems');
+        localStorage.removeItem('totalPrice');
+      </script>
+      
 </body>
 </html>

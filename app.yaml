@@ -21,3 +21,6 @@ handlers:
   - url: /.*
     static_files: \1
     upload: (.*)
+
+  - url: /connect.php
+    script: auto
