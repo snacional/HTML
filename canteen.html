@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="">
 
     <title>Food to Go</title>
-    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
 
     <!-- Scripts -->
     <script src="js/app.js" defer></script>
@@ -26,7 +26,7 @@
     <link href="css/land.css" rel="stylesheet">
 </head>
 <body>
-    <div class="vh-20">
+    <div class="vh-30">
         <nav class="navbar navbar-expand-md shadow-sm bg-navbar">
             <div class="container">
                 <a class="brand navbar-brand" href="land.html">
@@ -69,103 +69,84 @@
                     </div>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: white; font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                               
                             </a>
-
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                    Logout
+                                   Logout
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                   
                                 </form>
                             </div>
                         </li>
-                    
                 </ul>
             </div>
         </div>
     </nav>
         </nav>
     </div>
-    
-<div class="container-fluid my-5">
-    <div class="row justify-content-center ">
-        <div class="col-6 m-auto ">
-            <div class="card m-auto w-50 row loginShadow my-3" style="background-color: rgba(255, 255, 255, 0.0);">
-                <div class="card-header mt-4 p-3 d-flex" style="background-color: rgba(255, 255, 255, 0.0); border-bottom: 1px;"><h2 class="fw-bolder" style="color: Black;">Register</span></h2></div>
-
-                <div class="card-body my-1" >
-                    <form method="POST" action="register.html">
-                        
-
-                        <div class="row mb-3">
-                            
-
-                            <div class="col-md-12">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="Name" required autocomplete="name" autofocus style="border: 1px solid #C43F52;" placeholder="Name">
-
-                                
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Insert Name</strong>
-                                    </span>
-                                
+    <div class="container-fluid py-5">
+        <div class="col-10 mx-auto">
+            <h1 class="text-center"><span style="color: #C43F52;">Canteens</span></h1>
+            <div class="row row-cols-6 gap-3 justify-content-center align-items-center">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div style="background-color: #DED5C6;">
+                                        <a href="JBI.html">
+                                            <img src="img/JBI.png" class="d-block w-100" alt="" height="225vt">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div style="background-color: #FED700;">
+                                        <a href="Cocina.html">
+                                            <img src="img/Cocina.png" class="d-block w-100" alt="" height="225vt">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div style="background-color: #222222 ;">
+                                        <a href="RC.html">
+                                            <img src="img/RC.png" class="d-block w-100" alt="" height="225vt">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            
-
-                            <div class="col-md-12">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="Email Address" required autocomplete="email" style="border: 1px solid #C43F52;" placeholder="Email Address">
-
-                               
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Insert Email</strong>
-                                    </span>
-                                
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div>
+                                        <a href="coko.html">
+                                            <img src="img/coko.jpg" class="d-block w-100" alt="" height="225vt">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div>
+                                        <a href="kopi.html">
+                                            <img src="img/kopi.jpg" class="d-block w-100" alt="" height="225vt">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                           
-
-                            <div class="col-md-12">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" style="border: 1px solid #C43F52;" placeholder="Password">
-
-                                
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Insert Password</strong>
-                                    </span>
-                                
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                        
-
-                            <div class="col-md-12">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" style="border: 1px solid #C43F52;" placeholder="Confirm Password">
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6">
-                            <a href="login.html"> <button type="submit" class="btn btn-primary" style="background-color: #C43F52; border-color: #C43F52; width: 327px;" >
-                                    Rgister
-                                </button></a>
-                            </div>
-                        </div>
-                        <p class="text-center py-4"><span style="color: gray;">Already have an account? </span><a class="nav-link d-inline fw-bold" href="login.html" style="color: #C43F52;">Login</a></p>
-                    </form>
+                    </div>
                 </div>
+                <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" style="background-color: #C43F52;" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" style="background-color: #C43F52;" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
             </div>
         </div>
     </div>
-</div>
-
 </body>
 </html>

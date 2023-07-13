@@ -23,107 +23,152 @@
     <link href="css/land.css" rel="stylesheet">
 </head>
 <body>
-    <div class="vh">
-        <nav class="navbar">
+    <div class="vh-20">
+        <nav class="navbar navbar-expand-md shadow-sm bg-navbar">
             <div class="container">
-                <a class="brand" href="land.html">
-                    <img src="img/icon.png" height="40px"><span>Food to Go
+                <a class="brand navbar-brand" href="land.html">
+                <img src="img/icon.png" height="40px"><span>Food to Go</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <a class="navbar-brand" href="land.html">
-                            <span style="color:white;">   Home </span>
-                        </a>
+                            <span> Home </span>
+                        </a>   
                         <a class="navbar-brand" href="canteen.html">
-                            <span style="color:white;"> Canteens </span>
-                        </a>
-                        <a class="navbar-brand" href="">
-                            <span style="color:white;">  About Us </span>
-                        </a>
+                            <span> Canteens </span>
+                        </a>    
+                        <a class="navbar-brand" href="about.html">
+                            <span> About Us </span>
+                        </a>         
                     </ul>
+                   <!-- Right Side Of Navbar -->
+                   <ul class="navbar-nav ms-auto">
+                    <!-- Authentication Links -->
+                   
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white;" href="login.html"> Login </a>
+                            </li>
+                    
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white;" href="register.html" }}"> Register </a>
+                            </li>
+                      
+                    <!-- Heart & Cart -->
+                    <div class="d-flex align-items-center">
+                        <a class="navicon" href="favorites.html"><img src="img/heart.png" alt="Favorites" height="24"> </a>
+                        <a class="navicon" href="cart.html"><img src="img/cart.png" alt="Favorites" height="24"> </a>
+                    <!-- Profile -->
+                    </div>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: white; font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                               
+                            </a>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav">
-                        <!-- Authentication Links -->
-                        <li class="nav-item">
-                            <a class="nav-link" style="color:white;" href="login.html">Login</a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                   
+                                </form>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color:white;" href="register.html">Register</a>
-                        </li>
-                    </ul>
-                </div>
+                    
+                </ul>
             </div>
+        </div>
+    </nav>
         </nav>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-                <div class="card">
-                    <div class="login">
-                        <div class="card-title">
-                            <h2 class="fw-bolder">Sign In</h2>
+    
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 m-auto">
+            <div class="card m-auto w-50 row loginShadow">
+            <div class="login card-body">
+                <div class="card-title mt-4 p-3 d-flex">
+                    <h2 class="fw-bolder">Sign In</h2>
+                </div>
+
+                    <form method="POST" action="login.html">
+                        
+                        <div class="row-fluid mb-4">
+                            <label hidden for="email" class="col-md-2 col-form-label text-md-end"></label>
+
+                            <div class="col-md-11 mx-auto">
+                                <input id="email" style="border: 1px solid #C43F52;" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="Email Address" required autocomplete="email" autofocus placeholder="Email Address">
+
+                                
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Insert Email</strong>
+                                    </span>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="row-fluid mb-2">
+                            <label hidden for="password" class="col-md-2 col-form-label text-md-end"></label>
+
+                            <div class="col-md-11 mx-auto">
+                                <input id="password" style="border: 1px solid #C43F52;" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+
+                                
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Insert Password</strong>
+                                    </span>
+                                
+                            </div>
                         </div>
 
-                        <form method="POST" action="login.html">
-                            <div class="row-fluid">
-                                <label hidden for="email" class="col-md-2 col-form-label text-md-end"></label>
+                        <div class="d-flex row mb-3">
+                            <div class="col-6 d-flex justify-content-start" style="padding-left: 25px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" style="border: 1px solid #C43F52;" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                <div class="col-md-11">
-                                    <input id="email" style="border: 1px solid #C43F52;" type="email" class="form-control" name="email" required autocomplete="email" autofocus placeholder="Email Address">
+                                    <label class="form-check-label" for="remember">
+                                        Remember Me
+                                    </label>
                                 </div>
                             </div>
-
-                            <div class="row-fluid">
-                                <label hidden for="password" class="col-md-2 col-form-label text-md-end"></label>
-
-                                <div class="col-md-11">
-                                    <input id="password" style="border: 1px solid #C43F52;" type="password" class="form-control" name="password" required autocomplete="current-password" placeholder="Password">
-                                </div>
+                            
+                        </div>
+                        <div class="row">
+                                 <button type="submit" class="col-10 btn btn-primary btn-red mx-auto" style="box-shadow: 0px 10px 20px rgba(235, 45, 72, 0.5);">
+                                      <span>Sign In</span>
+                                 </button>
+                        </div>
+                        <div class="row">
+                        <div class="d-flex col-12 mt-3">
+                          
+                                    <a class="btn btn-link mx-auto" href="">
+                                       Forgot Your Password?
+                                    </a>
+                                
                             </div>
-
-                            <div class="d-flex row">
-                                <div class="col-6" style="padding-left: 25px;">
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="border: 1px solid #C43F52;" type="checkbox" name="remember" id="remember">
-
-                                        <label class="form-check-label" for="remember">
-                                            Remember Me
-                                        </label>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-0 mb-5">
+                               <p class="text-center"><span style="color: gray;">Don’t have an account?</span> <a class="nav-link d-inline fw-bold" href="register.html" style="color: #C43F52">Sign up</a></p>   
+                           </div>
+                        </div>
                             </div>
-
-                            <div class="row">
-                                <button type="submit" class="col-10 btn btn-primary btn-red mx-auto" style="box-shadow: 0px 10px 20px rgba(235, 45, 72, 0.5);">
-                                    <span>Sign In</span>
-                                </button>
-                            </div>
-
-                            <div class="row">
-                                <div class="d-flex">
-                                    <a class="btn" href="login.html">Forgot Your Password?</a>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <p class="text-center"><span style="color: gray;">Don’t have an account? <a class="nav-link" href="register.html" style="color: #C43F52">Sign up</a></p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                        </div>
+                    </form>
+            </div>  
             <div class="col-6 p-0">
-                <img src="img/Adnu.jpg" class="img-responsive" style="width:768px;height:637px;">
+                <img src="img/Adnu.jpg" class="img-responsive img-fluid fit-content"style="width:768px;height:637px;">
             </div>
         </div>
     </div>
+</div>
+
 </body>
 </html>

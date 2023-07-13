@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="">
 
     <title>Food to Go</title>
-    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
 
     <!-- Scripts -->
     <script src="js/app.js" defer></script>
@@ -26,7 +26,7 @@
     <link href="css/land.css" rel="stylesheet">
 </head>
 <body>
-    <div class="vh-20">
+    <div class="vh-50">
         <nav class="navbar navbar-expand-md shadow-sm bg-navbar">
             <div class="container">
                 <a class="brand navbar-brand" href="land.html">
@@ -76,7 +76,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                    Logout
+                                   Logout
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -91,81 +91,22 @@
     </nav>
         </nav>
     </div>
+    <div class="container my-5 py-5" >
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="card" style="background-color: rgba(255, 255, 255, 0.0);">
+                    <div class="card-header"style="background-color: #C43F52;"><span style="color: white;">About Us</span></div>
     
-<div class="container-fluid my-5">
-    <div class="row justify-content-center ">
-        <div class="col-6 m-auto ">
-            <div class="card m-auto w-50 row loginShadow my-3" style="background-color: rgba(255, 255, 255, 0.0);">
-                <div class="card-header mt-4 p-3 d-flex" style="background-color: rgba(255, 255, 255, 0.0); border-bottom: 1px;"><h2 class="fw-bolder" style="color: Black;">Register</span></h2></div>
-
-                <div class="card-body my-1" >
-                    <form method="POST" action="register.html">
-                        
-
-                        <div class="row mb-3">
-                            
-
-                            <div class="col-md-12">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="Name" required autocomplete="name" autofocus style="border: 1px solid #C43F52;" placeholder="Name">
-
-                                
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Insert Name</strong>
-                                    </span>
-                                
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            
-
-                            <div class="col-md-12">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="Email Address" required autocomplete="email" style="border: 1px solid #C43F52;" placeholder="Email Address">
-
-                               
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Insert Email</strong>
-                                    </span>
-                                
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                           
-
-                            <div class="col-md-12">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" style="border: 1px solid #C43F52;" placeholder="Password">
-
-                                
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Insert Password</strong>
-                                    </span>
-                                
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                        
-
-                            <div class="col-md-12">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" style="border: 1px solid #C43F52;" placeholder="Confirm Password">
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6">
-                            <a href="login.html"> <button type="submit" class="btn btn-primary" style="background-color: #C43F52; border-color: #C43F52; width: 327px;" >
-                                    Rgister
-                                </button></a>
-                            </div>
-                        </div>
-                        <p class="text-center py-4"><span style="color: gray;">Already have an account? </span><a class="nav-link d-inline fw-bold" href="login.html" style="color: #C43F52;">Login</a></p>
-                    </form>
+                    <div class="card-body" style="background-color: rgba(255, 255, 255, 0.0);">
+                        <p>Food to Go is a platform that allows you to order food from various canteens around your area. Our goal is to provide you with a convenient and easy way to order food, without having to worry about waiting in long lines or dealing with cash.</p>
+    
+                        <p>We believe that everyone should have access to delicious and affordable food, and our platform is designed to make that possible. Whether you're in a rush or simply want to avoid the hassle of cooking, Food to Go is the perfect solution for you.</p>
+    
+                        <p>If you have any questions or feedback, please feel free to contact us at <span class="fw-bold text-decoration-underline">support@foodtogo.com.</span></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-</body>
-</html>
+    </body>
+    </html>

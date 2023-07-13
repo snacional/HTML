@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="">
+
+    <title>Food to Go</title>
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
+
+    <!-- Scripts -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/land.css" rel="stylesheet">
+</head>
+<body>
+    <div class="vh-50">
+        <nav class="navbar navbar-expand-md shadow-sm bg-navbar">
+            <div class="container">
+                <a class="brand navbar-brand" href="land.html">
+                <img src="img/icon.png" height="40px"><span>Food to Go</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <a class="navbar-brand" href="land.html">
+                            <span> Home </span>
+                        </a>   
+                        <a class="navbar-brand" href="canteen.html">
+                            <span> Canteens </span>
+                        </a>    
+                        <a class="navbar-brand" href="about.html">
+                            <span> About Us </span>
+                        </a>         
+                    </ul>
+                   <!-- Right Side Of Navbar -->
+                   <ul class="navbar-nav ms-auto">
+                    <!-- Authentication Links -->
+                   
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white;" href="login.html"> Login </a>
+                            </li>
+                    
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white;" href="register.html" }}"> Register </a>
+                            </li>
+                      
+                    <!-- Heart & Cart -->
+                    <div class="d-flex align-items-center">
+                        <a class="navicon" href="favorites.html"><img src="img/heart.png" alt="Favorites" height="24"> </a>
+                        <a class="navicon" href="cart.html"><img src="img/cart.png" alt="Favorites" height="24"> </a>
+                    <!-- Profile -->
+                    </div>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: white; font-weight: bold;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                   Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                </form>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        </nav>
+    </div>
+    <h1 class ="my-auto" style="font-family: 'Lexend'; font-style: normal; font-weight: 400; font-size: 60px; line-height: 125px; text-align: center; color: #C43F52;">Kopi Cafe</h1>
+<p class ="loc pb-3 " style="font-family: 'Lexend'; font-style: normal; font-weight: 400; font-size: 15px; line-height: 31px; text-align: center; color: #6B6B6B;">Location: Xavier Hall </p>
+<h2 class ="my-auto" style="font-family: 'Lexend'; font-style: normal; font-weight: 400; font-size: 40px; line-height: 75px; text-align: center; color: #000000;">MENU</h2>
+<div class="container-fluid py-6">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card" style=" background-color: rgba(255, 255, 255, 0.5); border-color: #C43F52; border-radius: 15px; border: 3px solid #C43F52; height: 150px; max-height:">
+        <div class="card-body" >
+          <h3 class="card-title"><span style="font-family: 'Lexend'; font-style: normal; font-weight: 900; font-size: 35px; line-height: 56px; text-align: center; color: #000000; mix-blend-mode: normal;">Popular<img src="img/fire.png" height ="40vt" ></h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2">
+              <div class="col-auto">
+                <div class="card" style="background-color: #C43F52;">
+                  <div class="popular card-body">
+                    <p class="pp my-2">Food 1</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: #C43F52;">
+                  <div class="popular card-body">
+                    <p class="pp my-2">Food 2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color:#C43F52;">
+                <div class="popular card-body">
+                <p class="pp my-2" >Food 3</p>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+                <div class="card" style="background-color:#C43F52;">
+                <div class="popular card-body">
+                <p class="pp my-2" >Food 4</p>
+            </div>
+        </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+        <div class="row py-3">
+        <div class="meal col-md-5">
+        <div class="card" style=" scroll; background-color: rgba(255, 255, 255, 0.5); border-color: #C43F52; border-radius: 15px; border: 3px solid #C43F52; height: 280px;">
+        <div class="card-body" >
+          <h3 class="card-title"><span style="font-family: 'Lexend'; font-style: normal; font-size: 30px; line-height: 56px; text-align: center; color: #000000; mix-blend-mode: normal;">MEAL</h3>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1">
+          <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                  <p class="p">Food 1</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                    <p class="p">Food 2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                    <p class="p">Food 3</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                    <p class="p">Food 4</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                    <p class="p">Food 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                    <p class="p">Food 6</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="drink col-md-3">
+        <div class="card" style=" background-color: rgba(255, 255, 255, 0.5); border-color: #C43F52; border-radius: 15px; border: 3px solid #C43F52; height: 280px; width: 104%">
+        <div class="card-body" >
+          <h3 class="card-title"><span style="font-family: 'Lexend'; font-style: normal; font-size: 30px; line-height: 56px; text-align: center; color: #000000; mix-blend-mode: normal;">Drinks</h3>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1 g-1">
+          <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                  <p class="p">Drink 1</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                  <p class="p">Drink 2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background-color: white;">
+                  <div class="menu card-body">
+                  <p class="p">Drink 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-md-2 mx-auto">
+      <div class="card" style="background-color: #C43F52; border-color: #C43F52; border-radius: 10px; border: 3px solid #C43F52; height: 70px;">
+        <div class="card-body row-cols-0" style="border-radius: 10px; padding: 10px;">
+          <div class="card-body align-items-center" style="border-radius: 10px;">
+            <span style="color: white;">1</span>
+            <a href="cart.html"><input type="button"  id="cart-num" class="text-center" value="Cart" style="width: 50px; background-color: #C43F52;color: white; font-weight: bold; border: 1px; margin-left: 10px; margin-right: 10px;" ></a>
+            <span style="color:white;"> ₱</span> <span id="cart-price" style="color:white; margin-left: 10px; margin-right: 10px;">70.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
