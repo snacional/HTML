@@ -71,6 +71,7 @@
                   <p>Please wait for your turn. Your queue number is:</p>
                   <h2 class="mb-4" id="queue-number"></h2>
                   <p>Thank you for choosing Food to Go!</p>
+                  <p class="mt-4">Total Price: <span id="cart-total"></span></p>
                 </div>
               </div>
             </div>
@@ -85,6 +86,14 @@
       </style>
       
       <script>
+        // Retrieve total price from localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const totalPrice = parseFloat(localStorage.getItem('totalPrice')) || 0;
+      
+        // Display total price
+        const cartTotalElement = document.getElementById('cart-total');
+        cartTotalElement.textContent = `₱ ${totalPrice.toFixed(2)}`;
+      
         // Generate a random queue number
         const queueNumber = Math.floor(Math.random() * 100) + 1;
         const queueNumberElement = document.getElementById('queue-number');
